@@ -5,7 +5,7 @@ import time
 from discord.ext import commands, tasks
 from itertools import cycle
 
-bot = commands.Bot(command_prefix='$')
+client = commands.Bot(command_prefix='$')
 status = cycle(['$commands', 'Bot By Aura', 'Fixing Bugs', 'Im Asleep'])
 class Slapper(commands.Converter):
     async def convert(self, ctx, argument):
