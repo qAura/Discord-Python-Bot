@@ -5,14 +5,14 @@ import time
 from discord.ext import commands, tasks
 from itertools import cycle
 
-client = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='$')
 status = cycle(['$commands', 'Bot By Aura', 'Fixing Bugs', 'Im Online'])
 class Slapper(commands.Converter):
     async def convert(self, ctx, argument):
         to_slap = random.choice(ctx.guild.members)
         return '*{0.author}* hugged *{2}*'.format(ctx, to_slap, argument)
 
-@client.event
+@bot.event
 async def on_ready():
     
 
