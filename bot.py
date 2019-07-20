@@ -6,7 +6,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 
 bot = commands.Bot(command_prefix='$')
-status = cycle(['$commands', 'Bot By Aura', 'Fixing Bugs', 'Im Online'])
+status = cycle(['$commands', 'Bot By Aura', 'Fixing Bugs', 'Im Asleep'])
 class Slapper(commands.Converter):
     async def convert(self, ctx, argument):
         to_slap = random.choice(ctx.guild.members)
