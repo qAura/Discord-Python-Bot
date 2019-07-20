@@ -12,7 +12,7 @@ class Slapper(commands.Converter):
         to_slap = random.choice(ctx.guild.members)
         return '*{0.author}* hugged *{2}*'.format(ctx, to_slap, argument)
 
-@bot.event
+@client.event
 async def on_ready():
     
 
@@ -67,7 +67,7 @@ async def ban(ctx, member : discord.Member ):
 @client.event
 async def warn(ctx):
     await ctx.send("Warned :ghost:")
-    #warn command
+    #Fake Warm Command I Will Fix Next Update
 
 @client.command(aliases=['8ball'])
 async def eightball(ctx, *, question):
@@ -100,7 +100,7 @@ async def eightball(ctx, *, question):
 @client.command()
 async def ping(ctx):
     await ctx.send('Pong!')
-    #ping pong command
+    #ping pong command responds with response time next update
 
 @client.command()
 async def slap(ctx, members: commands.Greedy[discord.Member], *, reason='no reason'):
